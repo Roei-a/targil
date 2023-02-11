@@ -17,6 +17,7 @@ pipeline {
             steps {
                 sh 'echo "This is the Report stage"'
             }
+        }
         stage ('Cleanup'){
             steps {
                 sh 'echo "This is the Cleanup stage"'
