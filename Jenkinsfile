@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage ('Build'){
             steps {
+                sh 'sleep 5'
                 sh 'python3 /tmp/zip_job.py'
             }
         }
