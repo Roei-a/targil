@@ -5,6 +5,7 @@ pipeline {
     tools {
         jfrog 'jfrog-cli-latest'
     }
+    stages {
         stage ('Build'){
             steps {
                 sh 'pwd'
