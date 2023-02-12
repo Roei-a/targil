@@ -2,6 +2,9 @@ pipeline {
     agent {
         docker {image 'my-image:latest'}
     }
+    tools {
+        jfrog 'jfrog-cli-latest'
+    }
     stages {
         stage ('Build'){
             steps {
@@ -11,8 +14,7 @@ pipeline {
         }
         stage ('Publish'){
             steps {
-                sh 'echo "This is the Publish stage"'
-                sh 'sleep 5'
+                jf 'rt u *.zip binary-storage/'
             }
         }
         stage ('Report'){
