@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        VERSION = "sh 'echo $VERSION'"
+        VERSION = '$VERSION'
     }
     agent {
         docker {image 'my-image:latest'}
