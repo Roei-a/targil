@@ -6,6 +6,11 @@ pipeline {
         jfrog 'jfrog-cli-latest'
     }
     stages {
+        stage ('Install JFrog CLI') {
+            steps {
+                sh 'curl -fL https://getcli.jfrog.io | sh'
+            }
+        }
         stage ('Build'){
             steps {
                 sh 'sleep 5'
