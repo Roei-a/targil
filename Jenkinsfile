@@ -14,7 +14,7 @@ pipeline {
         }
         stage ('Publish'){
             steps { 
-                sh '/root/jenkins/tools/io.jenkins.plugins.jfrog.JfrogInstallation/jfrog-cli-latest/jf rt u *.zip binary-storage/$VERSION/'
+                sh '/root/jenkins/tools/io.jenkins.plugins.jfrog.JfrogInstallation/jfrog-cli-latest/jf rt u "*.zip" binary-storage/$VERSION/'
             }
         }
         stage ('Report'){
