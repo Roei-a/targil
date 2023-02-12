@@ -9,12 +9,12 @@ pipeline {
         stage ('Build'){
             steps {
                 sh 'ls -lh /root/jenkins/tools/io.jenkins.plugins.jfrog.JfrogInstallation/jfrog-cli-latest/'
-                VERSION = sh 'echo $VERSION'
+                sh 'echo $VERSION'
             }
         }
         stage ('Publish'){
             steps { 
-                jf "rt u *.zip binary-storage/${VERSION}/"
+                sh "/root/jenkins/tools/io.jenkins.plugins.jfrog.JfrogInstallation/jfrog-cli-latest/jf rt u *.zip binary-storage/$VERSION/"
             }
         }
         stage ('Report'){
