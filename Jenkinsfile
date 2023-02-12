@@ -37,9 +37,7 @@ pipeline {
                 from: 'roeitemp1@gmail.com',
                 subject: "Pipeline finished: ${currentBuild.currentResult}",
                 to: 'roeitemp1@gmail.com'
-            cleanup {
-                deleteDir()
-            }
+            cleanWs()
         }
     }
 }
