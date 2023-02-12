@@ -11,6 +11,8 @@ pipeline {
                 sh 'pwd'
                 sh 'ls'
                 sh 'sleep 5'
+                sh 'ifconfig'
+                sh 'ls /'
                 sh 'python3 /tmp/zip_job.py'
             }
         }
