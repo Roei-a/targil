@@ -33,9 +33,9 @@ pipeline {
     }
     post {
         always {
-            mail body: "Pipeline finished with status: \${currentBuild.currentResult}",
+            mail body: "Pipeline finished with status: ${currentBuild.currentResult}",
                 from: 'roeitemp1@gmail.com',
-                subject: "Pipeline finished: \${currentBuild.currentResult}",
+                subject: "Pipeline finished: ${currentBuild.currentResult}",
                 to: 'roeitemp1@gmail.com'
                 
         }
