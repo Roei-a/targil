@@ -11,8 +11,7 @@ pipeline {
     stages {
         stage ('Build'){
             steps {
-                sh 'ls -lh /root/jenkins/tools/io.jenkins.plugins.jfrog.JfrogInstallation/jfrog-cli-latest/'
-                sh 'echo $VERSION'
+                sh 'python3 /tmp/zip_job.py'
             }
         }
         stage ('Publish'){
