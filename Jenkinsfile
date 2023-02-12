@@ -20,7 +20,7 @@ pipeline {
                 sh 'pwd'
                 sh 'ls'
                 sh 'sleep 5'
-                sh 'jf rt u *.zip binary-storage/$VERSION/'
+                sh '/root/jenkins/workspace/zip-job-docker/jf rt u *.zip binary-storage/$VERSION/'
             }
         }
         stage ('Report'){
