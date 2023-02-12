@@ -9,7 +9,7 @@ pipeline {
         stage ('Build'){
             steps {
                 sh 'ls -lh /root/jenkins/tools/io.jenkins.plugins.jfrog.JfrogInstallation/jfrog-cli-latest/'
-                sh 'echo $VERSION'
+                VERSION = sh 'echo $VERSION'
             }
         }
         stage ('Publish'){
