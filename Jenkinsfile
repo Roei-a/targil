@@ -39,5 +39,10 @@ pipeline {
                 to: 'roeitemp1@gmail.com'
                 
         }
+        always {
+            cleanup {
+                deleteDir()
+            }
+        }
     }
 }
