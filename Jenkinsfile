@@ -21,7 +21,7 @@ pipeline {
                 sh 'pwd'
                 sh 'ls'
                 sh 'sleep 5'
-                jf 'rt u *.zip binary-storage/'
+                sh 'jf rt u *.zip binary-storage/$VERSION/'
             }
         }
         stage ('Report'){
