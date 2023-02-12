@@ -19,17 +19,6 @@ pipeline {
                 jf "rt u *.zip binary-storage/$VERSION/"
             }
         }
-        stage ('Report'){
-            steps {
-                sh 'echo "This is the Report stage"'
-                sh 'sleep 5'
-            }
-        }
-        stage ('Cleanup'){
-            steps {
-                sh 'echo "This is the Cleanup stage"'
-            }
-        }
     }
     post {
         always {
