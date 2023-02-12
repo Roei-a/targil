@@ -14,7 +14,7 @@ pipeline {
         }
         stage ('Publish'){
             steps { 
-                jf "rt u *.zip binary-storage/${env.VERSION}/"
+                jf "rt u *.zip binary-storage/${VERSION}/"
             }
         }
         stage ('Report'){
