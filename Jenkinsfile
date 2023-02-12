@@ -11,11 +11,13 @@ pipeline {
         stage ('Publish'){
             steps {
                 sh 'echo "This is the Publish stage"'
+                sh 'sleep 5'
             }
         }
         stage ('Report'){
             steps {
                 sh 'echo "This is the Report stage"'
+                sh 'sleep 5'
             }
         }
         stage ('Cleanup'){
