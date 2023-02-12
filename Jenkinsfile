@@ -8,19 +8,12 @@ pipeline {
     stages {
         stage ('Build'){
             steps {
-                sh 'pwd'
-                sh 'ls'
-                sh 'sleep 5'
-                sh 'ls /'
                 sh 'python3 /tmp/zip_job.py'
             }
         }
         stage ('Publish'){
             steps {
-                sh 'pwd'
-                sh 'ls'
-                sh 'sleep 5'
-                sh '/root/jenkins/workspace/zip-job-docker/jf rt u *.zip binary-storage/$VERSION/'
+                jf 'rt u *.zip binary-storage/$VERSION/'
             }
         }
         stage ('Report'){
